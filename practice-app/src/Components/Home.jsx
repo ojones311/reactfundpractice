@@ -6,24 +6,20 @@ const Home = () => {
 
     const increaseOne = () => {
         if(counter >= 0){
-            setCounter(counter++)
+            setCounter(counter + 1)
         }else{
             console.log('Error')
         }
     }
     const decreaseOne = () => {
-        if(counter >= 0){
-            setCounter(counter--)
+        if(counter > 0){
+            setCounter(counter - 1)
         }else{
             console.log('Cant decrement counter below zero')
         }
     }
 
-   useEffect(() => {
-       if(counter != 0){
-           setCounter(0)
-       }
-   })
+
     return(
         <div>
             <p>{counter}</p>
